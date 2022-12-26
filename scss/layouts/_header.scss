@@ -1,0 +1,154 @@
+@use '../utils/variables' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    &__container {
+        height: 502px;
+        background-color: $backgroundFeatureLightColor;
+    }
+}
+
+.headerNav {
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo--mobile {
+        width: 200px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    &__list {
+        display: none;
+    }
+
+    &__menuButton {
+        margin-right: 20px;
+        border: none;
+        background: none;
+    }
+
+    &__buyButton {
+        display: none;
+    }
+}
+
+.hero {
+    position: relative;
+    &__container {
+
+    }
+
+    &__imageCone {
+        width: 346px;
+        height: 344px;
+        background-color: $backgroundFeatureBaseColor;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -91px;
+        right: -94px;
+        z-index: 0;
+        
+        &--mobile {
+            width: 171px;
+            height: 410px;
+            margin-top: 9px;
+        }
+
+        &--tablet {
+            display: none;
+        }
+        &--desktop {
+            display: none;
+        }
+    }
+    &__title {
+        width: 218px;
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: calc(30/26);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;       
+        color: $titleInverseColor;
+        margin-top: 110px;
+        margin-left: 20px;
+    }
+    &__span {
+        color: $titlePrimaryColor;
+        font-size: 46px;
+    }
+
+    &__buttonList {
+        display: flex;
+        margin-left: 10px;   
+        margin-top: 20px;   
+        
+    }
+
+    &__buttonItem {
+        width: 62.4px;
+        height: 24px;
+        left: 20px;
+        top: 320px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+
+        &:nth-child(odd) {
+            background: $buttonAccentColor;
+            color: $textInverseColor;
+        }
+
+        &:nth-child(even) {
+            background: $buttonInverseColor;
+            color: $textAccentColor;
+        }
+
+    }
+
+    &__buttonLink {
+        color: inherit;
+        text-decoration: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: calc(10/8);
+        
+    }
+
+}
+
+.heroHype {
+    &__list {
+        display: none;
+    }
+}
+
+.heroMilk {
+    display: none;
+}
+
+.heroTasty {
+    display: none;
+}
