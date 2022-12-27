@@ -39,7 +39,7 @@ ul {
         margin-right: 20px;
         border: none;
         background: none;
-    }
+        }
 
     &__buyButton {
         display: none;
@@ -48,8 +48,10 @@ ul {
 
 .hero {
     position: relative;
-    &__container {
+    display: flex;
 
+
+    &__container {
     }
 
     &__imageCone {
@@ -60,9 +62,9 @@ ul {
         position: absolute;
         display: flex;
         justify-content: center;
-        top: -91px;
-        right: -94px;
-        z-index: 0;
+        top: 28px;
+        right: -62px;
+        z-index: 10;
         
         &--mobile {
             width: 171px;
@@ -76,7 +78,8 @@ ul {
         &--desktop {
             display: none;
         }
-    }
+    }    
+
     &__title {
         width: 218px;
         font-family: 'Titan One';
@@ -89,6 +92,8 @@ ul {
         color: $titleInverseColor;
         margin-top: 110px;
         margin-left: 20px;
+        position: relative;
+        z-index: 20;
     }
     &__span {
         color: $titlePrimaryColor;
@@ -98,43 +103,46 @@ ul {
     &__buttonList {
         display: flex;
         margin-left: 10px;   
-        margin-top: 20px;   
-        
+        margin-top: 20px;           
     }
 
-    &__buttonItem {
-        width: 62.4px;
-        height: 24px;
-        left: 20px;
-        top: 320px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: 10px;
+    &__buttonItem {}
 
-        &:nth-child(odd) {
-            background: $buttonAccentColor;
-            color: $textInverseColor;
-        }
-
-        &:nth-child(even) {
-            background: $buttonInverseColor;
-            color: $textAccentColor;
-        }
-
-    }
-
-    &__buttonLink {
-        color: inherit;
+    &__button {
         text-decoration: none;
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 8px;
         line-height: calc(10/8);
+        width: 62px;
+        height: 24px;
+        border-radius: 20px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        position: relative;
+        z-index: 20;
+
+
+        &--odd {
+            background: $buttonAccentColor;
+            color: $textInverseColor;
+            &:focus,
+            &:hover {
+                background: $buttonNeutralColor;
+                color: $textAccentColor;        
+            }
+        }
+
+        &--even {
+            background: $buttonInverseColor;
+            color: $textAccentColor;
+            }
         
+
     }
 
 }

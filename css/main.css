@@ -40,6 +40,7 @@ ul {
 
 .hero {
   position: relative;
+  display: flex;
 }
 .hero__imageCone {
   width: 346px;
@@ -49,9 +50,9 @@ ul {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: -91px;
-  right: -94px;
-  z-index: 0;
+  top: 28px;
+  right: -62px;
+  z-index: 10;
 }
 .hero__imageCone--mobile {
   width: 171px;
@@ -76,6 +77,8 @@ ul {
   color: #FFF;
   margin-top: 110px;
   margin-left: 20px;
+  position: relative;
+  z-index: 20;
 }
 .hero__span {
   color: #D41443;
@@ -86,34 +89,35 @@ ul {
   margin-left: 10px;
   margin-top: 20px;
 }
-.hero__buttonItem {
-  width: 62.4px;
-  height: 24px;
-  left: 20px;
-  top: 320px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-left: 10px;
-}
-.hero__buttonItem:nth-child(odd) {
-  background: #D41443;
-  color: #FFF;
-}
-.hero__buttonItem:nth-child(even) {
-  background: #FFF;
-  color: #D41443;
-}
-.hero__buttonLink {
-  color: inherit;
+.hero__button {
   text-decoration: none;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 8px;
   line-height: 1.25;
+  width: 62px;
+  height: 24px;
+  border-radius: 20px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: relative;
+  z-index: 20;
+}
+.hero__button--odd {
+  background: #D41443;
+  color: #FFF;
+}
+.hero__button--odd:focus, .hero__button--odd:hover {
+  background: #ECEBEB;
+  color: #D41443;
+}
+.hero__button--even {
+  background: #FFF;
+  color: #D41443;
 }
 
 .heroHype__list {
